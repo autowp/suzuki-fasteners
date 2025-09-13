@@ -1,0 +1,180 @@
+<div class="container my-4">
+  <h1 class="mb-4">Suzuki Fasteners Registry</h1>
+
+  <div class="decryption" style="min-height: 600px">
+    <div>
+      <div class="segment">
+        <code>01550</code>
+        <div class="info">
+          01550 - standard<br />
+          09XXX - special standard<br />
+        </div>
+      </div>
+      <div class="segment">
+        <code>-</code>
+      </div>
+      <div class="segment">
+        <code>06</code>
+        <div class="info">
+          thread size<br />
+          06 - M6<br />
+          08 - M8<br />
+          10 - M10<br />
+        </div>
+      </div>
+      <div class="segment">
+        <code>12</code>
+        <div class="info info-offset-9">
+          length<br />
+          03 - 100 mm<br />
+          08 - 16 mm screw with washer<br />
+          12 - 12 mm<br />
+          13 - 16 mm<br />
+          30 - 30 mm<br />
+          35 - 35 mm<br />
+        </div>
+      </div>
+      <div class="segment">
+        <code>3</code>
+        <div class="info">
+          color/finnish<br />
+          3 - regular<br />
+          5 - unknown<br />
+          6 - unknown<br />
+          7 - unknown<br />
+          A - silver/yellow<br />
+          B - black<br />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-hover table-striped">
+    @if (data$|async; as data) {
+      <thead>
+      <tr>
+        <th>
+          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'code_asc' ? 'code_desc' : 'code_asc'}">
+            @if (data.sort === 'code_asc') {
+              <i class="bi bi-sort-alpha-down"></i>
+            } @else if (data.sort === 'code_desc') {
+              <i class="bi bi-sort-alpha-up-alt"></i>
+            }
+            Code
+          </a>
+        </th>
+        <th>Replacement codes</th>
+        <th>
+          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'shape_asc' ? 'shape_desc' : 'shape_asc'}">
+            @if (data.sort === 'shape_asc') {
+              <i class="bi bi-sort-alpha-down"></i>
+            } @else if (data.sort === 'shape_desc') {
+              <i class="bi bi-sort-alpha-up-alt"></i>
+            }
+            Shape
+          </a>
+        </th>
+        <th>
+          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'thread_size_asc' ? 'thread_size_desc' : 'thread_size_asc'}">
+            @if (data.sort === 'thread_size_asc') {
+              <i class="bi bi-sort-alpha-down"></i>
+            } @else if (data.sort === 'thread_size_desc') {
+              <i class="bi bi-sort-alpha-up-alt"></i>
+            }
+            Thread
+          </a>
+        </th>
+        <th>
+          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'length_asc' ? 'length_desc' : 'length_asc'}">
+            @if (data.sort === 'length_asc') {
+              <i class="bi bi-sort-numeric-down"></i>
+            } @else if (data.sort === 'length_desc') {
+              <i class="bi bi-sort-numeric-up-alt"></i>
+            }
+            Length
+          </a>
+        </th>
+        <th>
+          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'key_size_asc' ? 'key_size_desc' : 'key_size_asc'}">
+            @if (data.sort === 'key_size_asc') {
+              <i class="bi bi-sort-numeric-down"></i>
+            } @else if (data.sort === 'key_size_desc') {
+              <i class="bi bi-sort-numeric-up-alt"></i>
+            }
+            Key Size
+          </a>
+        </th>
+        <th>
+          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'screwdriver_asc' ? 'screwdriver_desc' : 'screwdriver_asc'}">
+            @if (data.sort === 'screwdriver_asc') {
+              <i class="bi bi-sort-numeric-down"></i>
+            } @else if (data.sort === 'screwdriver_desc') {
+              <i class="bi bi-sort-numeric-up-alt"></i>
+            }
+            Screwdriver
+          </a>
+        </th>
+        <th>
+          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'color_asc' ? 'color_desc' : 'color_asc'}">
+            @if (data.sort === 'color_asc') {
+              <i class="bi bi-sort-alpha-down"></i>
+            } @else if (data.sort === 'color_desc') {
+              <i class="bi bi-sort-alpha-up-alt"></i>
+            }
+            Color
+          </a>
+        </th>
+        <th>
+          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'standard_asc' ? 'standard_desc' : 'standard_asc'}">
+            @if (data.sort === 'standard_asc') {
+              <i class="bi bi-sort-alpha-down"></i>
+            } @else if (data.sort === 'standard_desc') {
+              <i class="bi bi-sort-alpha-up-alt"></i>
+            }
+            Standard
+          </a>
+        </th>
+        <th>Photo</th>
+      </tr>
+      </thead>
+      <tbody>
+        @for (item of data.items; track item.code) {
+          <tr>
+            <td>{{ item.code }}</td>
+            <td>
+              @for (replacement of item.replacements; track replacement) {
+                <div>{{ replacement }}</div>
+              }
+            </td>
+            <td>{{item.shape}}</td>
+            <td>
+              @if (item.threadPitch) {
+                {{item.threadSize}}×{{item.threadPitch}}
+              } @else {
+                {{item.threadSize}}
+              }
+            </td>
+            <td>
+              @if (item.length) {
+                {{item.length}} mm
+              }
+            </td>
+            <td>
+              @if (item.keySize) {
+                {{item.keySize}} mm
+              }
+            </td>
+            <td>{{item.screwdriver}}</td>
+            <td>{{item.color}}</td>
+            <td>{{item.standard}}</td>
+            <td>
+              @if (item.photo) {
+                <a [href]="'photo/' + item.photo"><img alt="" [src]="'photo/' + item.photo" /></a>
+              }
+            </td>
+          </tr>
+        }
+      </tbody>
+    }
+  </table>
+</div>

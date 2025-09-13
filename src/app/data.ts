@@ -38,6 +38,12 @@ export const data: Item[] = [
     photo: '09118-06106.webp',
   },
   {
+    code: '01550-06203',
+    threadSize: 'M6',
+    length: 20,
+    replacements: ['01550-0620A', '01550-0620B'],
+  },
+  {
     code: '01550-0620A',
     threadSize: 'M6',
     length: 20,
@@ -45,6 +51,11 @@ export const data: Item[] = [
     color: 'silver',
     shape: 'flange hex bolt',
     photo: '01550-0620A.webp',
+  },
+  {
+    code: '01550-0620B',
+    threadSize: 'M6',
+    length: 20,
   },
   {
     code: '01550-08303',
@@ -198,16 +209,6 @@ export const data: Item[] = [
   },
   {
     code: '01550-0680B',
-  },
-  {
-    code: '01550-06203',
-    replacements: ['01550-0620A', '01550-0620B'],
-  },
-  {
-    code: '01550-0620A',
-  },
-  {
-    code: '01550-0620B',
   },
   {
     code: '02142-06103',

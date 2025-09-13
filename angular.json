@@ -19,6 +19,7 @@
               "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist",
             "assets": [
               {
                 "glob": "**/*",
@@ -70,26 +71,6 @@
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
         },
-        "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing",
-              "@angular/localize/init"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.css"
-            ]
-          }
-        },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
@@ -98,6 +79,9 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

@@ -2,6 +2,12 @@
 
 Visit [https://autowp.github.io/suzuki-fasteners/](https://autowp.github.io/suzuki-fasteners/)
 
+## Contributing
+
+Feel free to open pull request with fasteners description.
+
+https://github.com/autowp/suzuki-fasteners/blob/main/src/app/data.ts
+
 ## Development server
 
 To start a local development server, run:

@@ -4,12 +4,12 @@ export interface Item {
   threadSize?: 'M5' | 'M6' | 'M8' | 'M10' | 'M12';
   threadPitch?: number;
   length?: number;
-  keySize?: number | null;
+  keySize?: number;
   screwdriver?: string;
-  color?: string | null;
-  shape?: string | null;
-  standard?: string | null;
-  photo?: string | null;
+  color?: string;
+  shape?: string;
+  standard?: string;
+  photo?: string;
 }
 
 export const data: Item[] = [
@@ -242,5 +242,14 @@ export const data: Item[] = [
   },
   {
     code: '03211-16163',
+  },
+  {
+    code: '02142-06163',
+    replacements: ['02142-0616A'],
+    shape: 'mushroom',
+    screwdriver: 'PH',
+  },
+  {
+    code: '02142-0616A',
   },
 ];

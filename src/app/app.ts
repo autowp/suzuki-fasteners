@@ -6,18 +6,14 @@ import { AsyncPipe } from '@angular/common';
 
 const sortParamName = 'sort';
 
-function compareValues<T extends number | string | null | undefined>(
-  n1: T,
-  n2: T,
-  dir: 'asc' | 'desc',
-) {
+function compareValues<T extends number | string | undefined>(n1: T, n2: T, dir: 'asc' | 'desc') {
   const dirN = dir == 'asc' ? 1 : -1;
 
-  if (n1 === null || n1 === undefined) {
+  if (n1 === undefined) {
     return 1;
   }
 
-  if (n2 === null || n2 === undefined) {
+  if (n2 === undefined) {
     return -1;
   }
 

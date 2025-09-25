@@ -252,4 +252,90 @@ export const data: Item[] = [
   {
     code: '02142-0616A',
   },
+  {
+    code: '09139-06036',
+    shape: 'mushroom',
+    screwdriver: 'PH',
+  },
+  {
+    code: '01550-08203',
+    replacements: ['01550-0820A', '01550-0820B'],
+    shape: 'flange hex bolt',
+  },
+  {
+    code: '01550-0820A',
+    color: 'silver',
+    shape: 'flange hex bolt',
+  },
+  {
+    code: '01550-0820B',
+    color: 'black',
+    shape: 'flange hex bolt',
+  },
+  {
+    code: '01570-12353',
+    replacements: ['01570-1235A'],
+    shape: 'hex bolt with lock washer',
+  },
+  {
+    code: '01570-1235A',
+  },
+  {
+    code: '09100-08253',
+    shape: 'hex bolt',
+  },
+  {
+    code: '09116-06098',
+    shape: 'hex bolt with washer',
+    replacements: ['09116-06098-XC0'],
+  },
+  {
+    code: '09116-06098-XC0',
+    shape: 'hex bolt with washer',
+  },
+  {
+    code: '02112-35123',
+    replacements: ['02112-3512A'],
+    shape: 'screw',
+    screwdriver: 'PH',
+  },
+  {
+    code: '02112-3512A',
+  },
+  {
+    code: '01500-08203',
+    replacements: ['01500-0820A'],
+  },
+  {
+    code: '01500-0820A',
+  },
+  {
+    code: '09125-06041',
+    shape: 'screw',
+    screwdriver: 'PH',
+  },
+  {
+    code: '02112-76123',
+    replacements: ['02112-7612B'],
+  },
+  {
+    code: '09100-10168',
+    shape: 'hex bolt',
+    length: 37,
+    threadSize: 'M10',
+    keySize: 14,
+    color: 'silver',
+    photo: '09100-10168.webp',
+    threadPitch: 1.25,
+  },
+  {
+    code: '09125-06022',
+    shape: 'mushroom',
+    length: 16,
+    threadSize: 'M6',
+    screwdriver: 'PH',
+    color: 'black',
+    photo: '09125-06022.webp',
+    threadPitch: 1.0,
+  },
 ];

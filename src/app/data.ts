@@ -18,7 +18,7 @@ export const data: Item[] = [
     threadSize: 'M8',
     length: 20,
     color: 'silver',
-    shape: 'mushroom',
+    shape: 'mushroom screw',
     screwdriver: 'PH',
     standard: 'JIS-B 1111',
   },
@@ -274,7 +274,7 @@ export const data: Item[] = [
   {
     code: '02142-06163',
     replacements: ['02142-0616A'],
-    shape: 'mushroom',
+    shape: 'mushroom screw',
     screwdriver: 'PH',
   },
   {
@@ -282,7 +282,7 @@ export const data: Item[] = [
   },
   {
     code: '09139-06036',
-    shape: 'mushroom',
+    shape: 'mushroom screw',
     screwdriver: 'PH',
   },
   {
@@ -358,7 +358,7 @@ export const data: Item[] = [
   },
   {
     code: '09125-06022',
-    shape: 'mushroom',
+    shape: 'mushroom screw',
     length: 16,
     threadSize: 'M6',
     screwdriver: 'PH',
@@ -369,7 +369,7 @@ export const data: Item[] = [
   {
     code: '02112-06163',
     replacements: ['02112-0616B'],
-    shape: 'mushroom',
+    shape: 'round screw',
     length: 16,
     threadSize: 'M6',
     screwdriver: 'PH',
@@ -377,7 +377,7 @@ export const data: Item[] = [
   },
   {
     code: '02112-0616A',
-    shape: 'mushroom',
+    shape: 'round screw',
     length: 16,
     threadSize: 'M6',
     screwdriver: 'PH',
@@ -386,7 +386,7 @@ export const data: Item[] = [
   },
   {
     code: '02112-0616B',
-    shape: 'mushroom',
+    shape: 'round screw',
     length: 16,
     threadSize: 'M6',
     screwdriver: 'PH',

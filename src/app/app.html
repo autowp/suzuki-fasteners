@@ -24,54 +24,6 @@
     </div>
   </div>
 
-  <div class="decryption" style="min-height: 600px">
-    <div>
-      <div class="segment">
-        <code>01550</code>
-        <div class="info">
-          01550 - standard<br />
-          09XXX - special standard<br />
-        </div>
-      </div>
-      <div class="segment">
-        <code>-</code>
-      </div>
-      <div class="segment">
-        <code>06</code>
-        <div class="info">
-          <ng-container i18n>thread size</ng-container><br />
-          06 - M6<br />
-          08 - M8<br />
-          10 - M10<br />
-        </div>
-      </div>
-      <div class="segment">
-        <code>12</code>
-        <div class="info info-offset-9">
-          <ng-container i18n>length</ng-container><br />
-          03 - 100 mm<br />
-          08 - 16 mm <ng-container i18n>screw with washer</ng-container><br />
-          12 - 12 mm<br />
-          13 - 16 mm<br />
-          30 - 30 mm<br />
-          35 - 35 mm<br />
-        </div>
-      </div>
-      <div class="segment">
-        <code>3</code>
-        <div class="info">
-          <ng-container i18n>color/finnish</ng-container><br />
-          3 - regular<br />
-          5 - unknown<br />
-          6 - unknown<br />
-          7 - unknown<br />
-          A - silver/yellow<br />
-          B - black<br />
-        </div>
-      </div>
-    </div>
-  </div>
-
   <table class="table table-bordered table-hover table-striped">
     @if (data$|async; as data) {
       <thead>
@@ -196,6 +148,76 @@
       </tbody>
     }
   </table>
+
+  <div class="decryption" style="min-height: 600px">
+    <div>
+      <div class="segment">
+        <code>015</code>
+        <div class="info">
+          011 - hexagon bolt<br />
+          012 - crown head bolt<br />
+          013 - pointed hexagon bolt<br />
+          015 - ???<br />
+          09X - special
+        </div>
+      </div>
+      <div class="segment">
+        <code>5</code>
+        <div class="info">
+          head size<br />
+          1 - regular<br />
+          2 - small<br />
+          5 - ???
+        </div>
+      </div>
+      <div class="segment">
+        <code>0</code>
+        <div class="info">
+          material<br />
+          1 - semi-mild steel<br />
+          2 - hard steel
+        </div>
+      </div>
+      <div class="segment">
+        <code>-</code>
+      </div>
+      <div class="segment">
+        <code>06</code>
+        <div class="info">
+          <ng-container i18n>thread size</ng-container><br />
+          06 - M6<br />
+          08 - M8<br />
+          10 - M10<br />
+        </div>
+      </div>
+      <div class="segment">
+        <code>12</code>
+        <div class="info">
+          <ng-container i18n>length</ng-container><br />
+          03 - 100 mm<br />
+          12 - 12 mm<br />
+          13 - 16 mm<br />
+          30 - 30 mm<br />
+          35 - 35 mm<br />
+        </div>
+      </div>
+      <div class="segment">
+        <code>3</code>
+        <div class="info">
+          <ng-container i18n>color/finnish</ng-container><br />
+          1 - zink<br />
+          2 - chrome<br />
+          3 - cadmium<br />
+          5 - unknown<br />
+          6 - unknown<br />
+          7 - unknown<br />
+          A - silver/yellow<br />
+          B - black<br />
+        </div>
+      </div>
+    </div>
+  </div>
+
   <p>
     <i class="bi bi-github me-1"></i>
     <a href="https://github.com/autowp/suzuki-fasteners/blob/main/src/app/data.ts" i18n>Add new item to database</a>

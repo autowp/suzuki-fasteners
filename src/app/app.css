@@ -25,11 +25,12 @@ img {
 }
 
 .segment code {
-  font-size: 128px;
+  font-size: 192px;
 }
 
 .segment .info {
   position: absolute;
+  margin-top: -60px;
   left: 37px;
   border-left: 1px dotted #000;
   border-bottom: 1px dotted #000;

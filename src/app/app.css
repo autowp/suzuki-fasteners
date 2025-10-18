@@ -3,6 +3,11 @@ img {
   max-height: 100px;
 }
 
+.flag {
+  max-height: 1em;
+  margin-right: 0.2em;
+  margin-left: 1em;
+}
 
 .decryption {
   font-family: monospace;

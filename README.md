@@ -25,3 +25,9 @@ To deploy, run:
 ```bash
 ng deploy --base-href=/suzuki-fasteners/
 ```
+
+To generate messages file
+
+```bash
+ng extract-i18n --output-path src/locale
+```

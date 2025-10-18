@@ -1,13 +1,26 @@
-<div class="container my-4">
+<div class="container-xxl my-4">
   <div class="row">
-    <div class="col-8">
-      <h1 class="mb-4">Suzuki Fasteners Registry</h1>
+    <div class="col-7">
+      <h1 class="mb-4" i18n>Suzuki Fasteners Registry</h1>
     </div>
-    <div class="col-4 text-end">
-      <i class="bi bi-github me-1"></i>
-      <a href="https://github.com/autowp/suzuki-fasteners/blob/main/src/app/data.ts">Add new item to database</a> or
-      <i class="bi bi-github me-1"></i>
-      <a href="https://github.com/autowp/suzuki-fasteners/issues/new">open issue</a>
+    <div class="col-5 text-end">
+      <p>
+        <a href="https://autowp.github.io/suzuki-fasteners/en/">
+          <img alt="" src="https://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg" class="flag"/>
+          English
+        </a>
+        <a href="https://autowp.github.io/suzuki-fasteners/ru/">
+          <img alt="" src="https://purecatamphetamine.github.io/country-flag-icons/3x2/RU.svg" class="flag"/>
+          Русский
+        </a>
+      </p>
+      <p>
+        <i class="bi bi-github me-1"></i>
+        <a href="https://github.com/autowp/suzuki-fasteners/blob/main/src/app/data.ts" i18n>Add new item to database</a>
+        <ng-container i18n> or </ng-container>
+        <i class="bi bi-github me-1"></i>
+        <a href="https://github.com/autowp/suzuki-fasteners/issues/new" i18n>open issue</a>
+      </p>
     </div>
   </div>
 
@@ -26,7 +39,7 @@
       <div class="segment">
         <code>06</code>
         <div class="info">
-          thread size<br />
+          <ng-container i18n>thread size</ng-container><br />
           06 - M6<br />
           08 - M8<br />
           10 - M10<br />
@@ -35,9 +48,9 @@
       <div class="segment">
         <code>12</code>
         <div class="info info-offset-9">
-          length<br />
+          <ng-container i18n>length</ng-container><br />
           03 - 100 mm<br />
-          08 - 16 mm screw with washer<br />
+          08 - 16 mm <ng-container i18n>screw with washer</ng-container><br />
           12 - 12 mm<br />
           13 - 16 mm<br />
           30 - 30 mm<br />
@@ -47,7 +60,7 @@
       <div class="segment">
         <code>3</code>
         <div class="info">
-          color/finnish<br />
+          <ng-container i18n>color/finnish</ng-container><br />
           3 - regular<br />
           5 - unknown<br />
           6 - unknown<br />
@@ -70,18 +83,18 @@
             } @else if (data.sort === 'code_desc') {
               <i class="bi bi-sort-alpha-up-alt"></i>
             }
-            Code
+            <ng-container i18n>Code</ng-container>
           </a>
         </th>
-        <th>Replacement codes</th>
+        <th><ng-container i18n>Replacement codes</ng-container></th>
         <th>
-          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'shape_asc' ? 'shape_desc' : 'shape_asc'}">
-            @if (data.sort === 'shape_asc') {
+          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'type_asc' ? 'type_desc' : 'type_asc'}">
+            @if (data.sort === 'type_asc') {
               <i class="bi bi-sort-alpha-down"></i>
-            } @else if (data.sort === 'shape_desc') {
+            } @else if (data.sort === 'type_desc') {
               <i class="bi bi-sort-alpha-up-alt"></i>
             }
-            Shape
+            <ng-container i18n>Type</ng-container>
           </a>
         </th>
         <th>
@@ -91,7 +104,7 @@
             } @else if (data.sort === 'thread_size_desc') {
               <i class="bi bi-sort-alpha-up-alt"></i>
             }
-            Thread
+            <ng-container i18n>Thread</ng-container>
           </a>
         </th>
         <th>
@@ -101,7 +114,7 @@
             } @else if (data.sort === 'length_desc') {
               <i class="bi bi-sort-numeric-up-alt"></i>
             }
-            Length
+            <ng-container i18n>Length</ng-container>
           </a>
         </th>
         <th>
@@ -111,7 +124,7 @@
             } @else if (data.sort === 'key_size_desc') {
               <i class="bi bi-sort-numeric-up-alt"></i>
             }
-            Key Size
+            <ng-container i18n>Key Size</ng-container>
           </a>
         </th>
         <th>
@@ -121,7 +134,7 @@
             } @else if (data.sort === 'screwdriver_desc') {
               <i class="bi bi-sort-numeric-up-alt"></i>
             }
-            Screwdriver
+            <ng-container i18n>Screwdriver</ng-container>
           </a>
         </th>
         <th>
@@ -131,35 +144,32 @@
             } @else if (data.sort === 'color_desc') {
               <i class="bi bi-sort-alpha-up-alt"></i>
             }
-            Color
+            <ng-container i18n>Color</ng-container>
           </a>
         </th>
-        <th>
-          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'standard_asc' ? 'standard_desc' : 'standard_asc'}">
-            @if (data.sort === 'standard_asc') {
-              <i class="bi bi-sort-alpha-down"></i>
-            } @else if (data.sort === 'standard_desc') {
-              <i class="bi bi-sort-alpha-up-alt"></i>
-            }
-            Standard
-          </a>
-        </th>
-        <th>Photo</th>
+        <th><ng-container i18n>Photo</ng-container></th>
       </tr>
       </thead>
       <tbody>
         @for (item of data.items; track item.code) {
           <tr>
-            <td>{{ item.code }}</td>
+            <td><code>{{ item.code }}</code></td>
             <td>
               @for (replacement of item.replacements; track replacement) {
-                <div>{{ replacement }}</div>
+                <div><code>{{ replacement }}</code></div>
               }
             </td>
-            <td>{{item.shape}}</td>
+            <td>
+              @if (item.type) {
+                {{ fastenerTypeName[item.type] }}
+              }
+              @if (item.standard) {
+                <div>{{item.standard}}</div>
+              }
+            </td>
             <td>
               @if (item.threadPitch) {
-                {{item.threadSize}}×{{item.threadPitch}}
+                {{item.threadSize}}×{{item.threadPitch | number:'1.2-2'}}
               } @else {
                 {{item.threadSize}}
               }
@@ -176,7 +186,6 @@
             </td>
             <td>{{item.screwdriver}}</td>
             <td>{{item.color}}</td>
-            <td>{{item.standard}}</td>
             <td>
               @if (item.photo) {
                 <a [href]="'photo/' + item.photo"><img alt="" [src]="'photo/' + item.photo" /></a>
@@ -187,4 +196,11 @@
       </tbody>
     }
   </table>
+  <p>
+    <i class="bi bi-github me-1"></i>
+    <a href="https://github.com/autowp/suzuki-fasteners/blob/main/src/app/data.ts" i18n>Add new item to database</a>
+    <ng-container i18n> or </ng-container>
+    <i class="bi bi-github me-1"></i>
+    <a href="https://github.com/autowp/suzuki-fasteners/issues/new" i18n>open issue</a>
+  </p>
 </div>

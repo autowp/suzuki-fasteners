@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { data } from './data';
+import { data, fastenerTypeName } from './data';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, DecimalPipe } from '@angular/common';
 
 const sortParamName = 'sort';
 
@@ -30,7 +30,7 @@ function compareValues<T extends number | string | undefined>(n1: T, n2: T, dir:
 
 @Component({
   selector: 'app-root',
-  imports: [AsyncPipe, RouterLink],
+  imports: [AsyncPipe, RouterLink, DecimalPipe],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -49,11 +49,11 @@ export class App {
         case 'code_desc':
           result = data.sort((n1, n2) => compareValues(n1.code, n2.code, 'desc'));
           break;
-        case 'shape_asc':
-          result = data.sort((n1, n2) => compareValues(n1.shape, n2.shape, 'asc'));
+        case 'type_asc':
+          result = data.sort((n1, n2) => compareValues(n1.type, n2.type, 'asc'));
           break;
-        case 'shape_desc':
-          result = data.sort((n1, n2) => -compareValues(n1.shape, n2.shape, 'desc'));
+        case 'type_desc':
+          result = data.sort((n1, n2) => -compareValues(n1.type, n2.type, 'desc'));
           break;
         case 'thread_size_asc':
           result = data.sort((n1, n2) => compareValues(n1.threadSize, n2.threadSize, 'asc'));
@@ -98,4 +98,5 @@ export class App {
       };
     }),
   );
+  protected readonly fastenerTypeName = fastenerTypeName;
 }

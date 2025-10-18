@@ -7,34 +7,60 @@ export interface Item {
   keySize?: number;
   screwdriver?: string;
   color?: string;
-  shape?: string;
+  type?: FastenerType;
   standard?: string;
   photo?: string;
 }
+
+export enum FastenerType {
+  FLANGE_HEX_BOLT = 'flange hex bolt',
+  HEX_BOLT = 'hex bolt',
+  HEX_BOLT_WITH_WASHER = 'hex bolt with washer',
+  HEX_BOLT_WITH_LOCK_WASHER = 'hex bolt with lock washer',
+  HEX_BOLT_WITH_WASHER_AND_LOCK_WASHER = 'hex bolt with washer and lock washer',
+  SCREW = 'screw',
+  ROUND_SCREW = 'round screw',
+  MUSHROOM_SCREW = 'mushroom screw',
+  SCREW_WITH_WASHER = 'screw with washer',
+  COUNTERSUNK_HEAD_SELF_TAPPING_SCREW = 'countersunk head self-tapping screw',
+}
+
+export const fastenerTypeName: Record<FastenerType, string> = {
+  [FastenerType.FLANGE_HEX_BOLT]: $localize`flange hex bolt`,
+  [FastenerType.HEX_BOLT]: $localize`hex bolt`,
+  [FastenerType.HEX_BOLT_WITH_WASHER]: $localize`hex bolt with washer`,
+  [FastenerType.HEX_BOLT_WITH_LOCK_WASHER]: $localize`hex bolt with lock washer`,
+  [FastenerType.HEX_BOLT_WITH_WASHER_AND_LOCK_WASHER]: $localize`hex bolt with washer and lock washer`,
+  [FastenerType.SCREW]: $localize`screw`,
+  [FastenerType.ROUND_SCREW]: $localize`round screw`,
+  [FastenerType.MUSHROOM_SCREW]: $localize`mushroom screw`,
+  [FastenerType.SCREW_WITH_WASHER]: $localize`screw with washer`,
+  [FastenerType.COUNTERSUNK_HEAD_SELF_TAPPING_SCREW]: $localize`countersunk head self-tapping screw`,
+};
 
 export const data: Item[] = [
   {
     code: '09125-08015',
     threadSize: 'M8',
     length: 20,
-    color: 'silver',
-    shape: 'mushroom screw',
+    color: $localize`silver`,
+    type: FastenerType.MUSHROOM_SCREW,
     screwdriver: 'PH',
     standard: 'JIS-B 1111',
   },
   {
     code: '01550-10163',
     length: 16,
-    color: 'black',
-    shape: 'flange hex bolt',
+    color: $localize`black`,
+    type: FastenerType.FLANGE_HEX_BOLT,
     standard: 'JIS-B 1111',
   },
   {
     code: '09118-06106',
     threadSize: 'M6',
     length: 16,
-    color: 'silver',
-    shape: 'hex bolt with washer and lock washer',
+    color: $localize`silver`,
+    type: FastenerType.HEX_BOLT_WITH_WASHER_AND_LOCK_WASHER,
     photo: '09118-06106.webp',
   },
   {
@@ -48,8 +74,8 @@ export const data: Item[] = [
     threadSize: 'M6',
     length: 20,
     keySize: 10,
-    color: 'silver',
-    shape: 'flange hex bolt',
+    color: $localize`silver`,
+    type: FastenerType.FLANGE_HEX_BOLT,
     photo: '01550-0620A.webp',
   },
   {
@@ -61,7 +87,7 @@ export const data: Item[] = [
     code: '01550-08303',
     threadSize: 'M8',
     replacements: ['01550-0830A', '01550-0830B'],
-    shape: 'hex bolt with washer',
+    type: FastenerType.HEX_BOLT_WITH_WASHER,
     length: 30,
     keySize: 12,
   },
@@ -71,8 +97,8 @@ export const data: Item[] = [
     threadPitch: 1.25,
     length: 30,
     keySize: 12,
-    color: 'silver',
-    shape: 'flange hex bolt',
+    color: $localize`silver`,
+    type: FastenerType.FLANGE_HEX_BOLT,
     photo: '01550-0830A.webp',
   },
   {
@@ -92,8 +118,8 @@ export const data: Item[] = [
     threadSize: 'M6',
     length: 12,
     keySize: 10,
-    color: 'silver',
-    shape: 'flange hex bolt',
+    color: $localize`silver`,
+    type: FastenerType.FLANGE_HEX_BOLT,
   },
   {
     code: '01550-0612B',
@@ -101,8 +127,8 @@ export const data: Item[] = [
     threadSize: 'M6',
     length: 12,
     keySize: 10,
-    color: 'black',
-    shape: 'flange hex bolt',
+    color: $localize`black`,
+    type: FastenerType.FLANGE_HEX_BOLT,
     photo: '01550-0612B.webp',
   },
   {
@@ -111,7 +137,7 @@ export const data: Item[] = [
     threadSize: 'M6',
     length: 16,
     screwdriver: 'PH',
-    shape: 'screw with washer',
+    type: FastenerType.SCREW_WITH_WASHER,
   },
   {
     code: '09136-06133',
@@ -120,8 +146,8 @@ export const data: Item[] = [
     length: 16,
     keySize: 10,
     screwdriver: 'PH',
-    color: 'silver',
-    shape: 'hex bolt with washer',
+    color: $localize`silver`,
+    type: FastenerType.HEX_BOLT_WITH_WASHER,
     photo: '09136-06133.webp',
   },
   {
@@ -135,8 +161,8 @@ export const data: Item[] = [
     threadSize: 'M8',
     keySize: 12,
     length: 35,
-    color: 'silver',
-    shape: 'flange hex bolt',
+    color: $localize`silver`,
+    type: FastenerType.FLANGE_HEX_BOLT,
     photo: '01550-0835A.webp',
   },
   {
@@ -154,7 +180,7 @@ export const data: Item[] = [
     length: 100,
     threadSize: 'M10',
     threadPitch: 1.25,
-    color: 'silver',
+    color: $localize`silver`,
   },
   {
     code: '02112-36163',
@@ -188,19 +214,19 @@ export const data: Item[] = [
   {
     code: '03242-05163',
     replacements: ['03241-0516A'],
-    shape: 'mushroom screw',
+    type: FastenerType.MUSHROOM_SCREW,
     threadSize: 'M5',
     screwdriver: 'PH',
     length: 16,
   },
   {
     code: '03241-0516A',
-    shape: 'mushroom screw',
+    type: FastenerType.MUSHROOM_SCREW,
     threadSize: 'M5',
     screwdriver: 'PH',
     photo: '03241-0516A.webp',
     length: 16,
-    color: 'silver',
+    color: $localize`silver`,
   },
   {
     code: '01550-08163',
@@ -235,7 +261,7 @@ export const data: Item[] = [
   {
     code: '01550-06163',
     replacements: ['01550-0616A', '01550-0616B', '01500-06167'],
-    shape: 'flange hex bolt',
+    type: FastenerType.FLANGE_HEX_BOLT,
     threadSize: 'M6',
     keySize: 10,
     length: 16,
@@ -243,21 +269,21 @@ export const data: Item[] = [
   },
   {
     code: '01550-0616A',
-    shape: 'flange hex bolt',
+    type: FastenerType.FLANGE_HEX_BOLT,
     threadSize: 'M6',
     keySize: 10,
     length: 16,
     threadPitch: 1.0,
-    color: 'silver',
+    color: $localize`silver`,
   },
   {
     code: '01550-0616B',
-    shape: 'flange hex bolt',
+    type: FastenerType.FLANGE_HEX_BOLT,
     threadSize: 'M6',
     keySize: 10,
     length: 16,
     threadPitch: 1.0,
-    color: 'black',
+    color: $localize`black`,
     photo: '01550-0616B.webp',
   },
   {
@@ -276,7 +302,7 @@ export const data: Item[] = [
   {
     code: '02142-06163',
     replacements: ['02142-0616A'],
-    shape: 'mushroom screw',
+    type: FastenerType.MUSHROOM_SCREW,
     screwdriver: 'PH',
   },
   {
@@ -284,49 +310,49 @@ export const data: Item[] = [
   },
   {
     code: '09139-06036',
-    shape: 'mushroom screw',
+    type: FastenerType.MUSHROOM_SCREW,
     screwdriver: 'PH',
   },
   {
     code: '01550-08203',
     replacements: ['01550-0820A', '01550-0820B'],
-    shape: 'flange hex bolt',
+    type: FastenerType.FLANGE_HEX_BOLT,
   },
   {
     code: '01550-0820A',
-    color: 'silver',
-    shape: 'flange hex bolt',
+    color: $localize`silver`,
+    type: FastenerType.FLANGE_HEX_BOLT,
   },
   {
     code: '01550-0820B',
-    color: 'black',
-    shape: 'flange hex bolt',
+    color: $localize`black`,
+    type: FastenerType.FLANGE_HEX_BOLT,
   },
   {
     code: '01570-12353',
     replacements: ['01570-1235A'],
-    shape: 'hex bolt with lock washer',
+    type: FastenerType.HEX_BOLT_WITH_LOCK_WASHER,
   },
   {
     code: '01570-1235A',
   },
   {
     code: '09100-08253',
-    shape: 'hex bolt',
+    type: FastenerType.HEX_BOLT,
   },
   {
     code: '09116-06098',
-    shape: 'hex bolt with washer',
+    type: FastenerType.HEX_BOLT_WITH_WASHER,
     replacements: ['09116-06098-XC0'],
   },
   {
     code: '09116-06098-XC0',
-    shape: 'hex bolt with washer',
+    type: FastenerType.HEX_BOLT_WITH_WASHER,
   },
   {
     code: '02112-35123',
     replacements: ['02112-3512A'],
-    shape: 'screw',
+    type: FastenerType.SCREW,
     screwdriver: 'PH',
   },
   {
@@ -341,7 +367,7 @@ export const data: Item[] = [
   },
   {
     code: '09125-06041',
-    shape: 'screw',
+    type: FastenerType.SCREW,
     screwdriver: 'PH',
   },
   {
@@ -350,28 +376,28 @@ export const data: Item[] = [
   },
   {
     code: '09100-10168',
-    shape: 'hex bolt',
+    type: FastenerType.HEX_BOLT,
     length: 37,
     threadSize: 'M10',
     keySize: 14,
-    color: 'silver',
+    color: $localize`silver`,
     photo: '09100-10168.webp',
     threadPitch: 1.25,
   },
   {
     code: '09125-06022',
-    shape: 'mushroom screw',
+    type: FastenerType.MUSHROOM_SCREW,
     length: 16,
     threadSize: 'M6',
     screwdriver: 'PH',
-    color: 'black',
+    color: $localize`black`,
     photo: '09125-06022.webp',
     threadPitch: 1.0,
   },
   {
     code: '02112-06163',
     replacements: ['02112-0616B'],
-    shape: 'round screw',
+    type: FastenerType.ROUND_SCREW,
     length: 16,
     threadSize: 'M6',
     screwdriver: 'PH',
@@ -379,38 +405,38 @@ export const data: Item[] = [
   },
   {
     code: '02112-0616A',
-    shape: 'round screw',
+    type: FastenerType.ROUND_SCREW,
     length: 16,
     threadSize: 'M6',
     screwdriver: 'PH',
-    color: 'silver',
+    color: $localize`silver`,
     threadPitch: 1.0,
   },
   {
     code: '02112-0616B',
-    shape: 'round screw',
+    type: FastenerType.ROUND_SCREW,
     length: 16,
     threadSize: 'M6',
     screwdriver: 'PH',
-    color: 'black',
+    color: $localize`black`,
     photo: '02112-0616B.webp',
     threadPitch: 1.0,
   },
   {
     code: '03121-05163',
     replacements: ['03121-0516A'],
-    shape: 'countersunk head self-tapping screw',
+    type: FastenerType.COUNTERSUNK_HEAD_SELF_TAPPING_SCREW,
     length: 12,
     threadSize: 'M5',
     screwdriver: 'PH',
   },
   {
     code: '03121-0516A',
-    shape: 'countersunk head self-tapping screw',
+    type: FastenerType.COUNTERSUNK_HEAD_SELF_TAPPING_SCREW,
     length: 12,
     threadSize: 'M5',
     screwdriver: 'PH',
-    color: 'silver',
+    color: $localize`silver`,
     photo: '03121-0516A.webp',
   },
 ];

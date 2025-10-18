@@ -68,10 +68,12 @@ export const data: Item[] = [
   {
     code: '01550-0830A',
     threadSize: 'M8',
+    threadPitch: 1.25,
     length: 30,
     keySize: 12,
     color: 'silver',
     shape: 'flange hex bolt',
+    photo: '01550-0830A.webp',
   },
   {
     code: '01550-0830B',
@@ -393,5 +395,22 @@ export const data: Item[] = [
     color: 'black',
     photo: '02112-0616B.webp',
     threadPitch: 1.0,
+  },
+  {
+    code: '03121-05163',
+    replacements: ['03121-0516A'],
+    shape: 'countersunk head self-tapping screw',
+    length: 12,
+    threadSize: 'M5',
+    screwdriver: 'PH',
+  },
+  {
+    code: '03121-0516A',
+    shape: 'countersunk head self-tapping screw',
+    length: 12,
+    threadSize: 'M5',
+    screwdriver: 'PH',
+    color: 'silver',
+    photo: '03121-0516A.webp',
   },
 ];

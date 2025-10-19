@@ -1,6 +1,9 @@
 # Suzuki Fasteners Registry
 
-Visit [https://autowp.github.io/suzuki-fasteners/](https://autowp.github.io/suzuki-fasteners/)
+Visit
+
+- [https://autowp.github.io/suzuki-fasteners/en/](https://autowp.github.io/suzuki-fasteners/en/) (English)
+- [https://autowp.github.io/suzuki-fasteners/ru/](https://autowp.github.io/suzuki-fasteners/ru/) (Русский)
 
 ## Contributing
 

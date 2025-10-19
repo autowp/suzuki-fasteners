@@ -24,130 +24,140 @@
     </div>
   </div>
 
-  <table class="table table-bordered table-hover table-striped">
-    @if (data$|async; as data) {
-      <thead>
-      <tr>
-        <th>
-          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'code_asc' ? 'code_desc' : 'code_asc'}">
-            @if (data.sort === 'code_asc') {
-              <i class="bi bi-sort-alpha-down"></i>
-            } @else if (data.sort === 'code_desc') {
-              <i class="bi bi-sort-alpha-up-alt"></i>
-            }
-            <ng-container i18n>Code</ng-container>
-          </a>
-        </th>
-        <th><ng-container i18n>Replacement codes</ng-container></th>
-        <th>
-          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'type_asc' ? 'type_desc' : 'type_asc'}">
-            @if (data.sort === 'type_asc') {
-              <i class="bi bi-sort-alpha-down"></i>
-            } @else if (data.sort === 'type_desc') {
-              <i class="bi bi-sort-alpha-up-alt"></i>
-            }
-            <ng-container i18n>Type</ng-container>
-          </a>
-        </th>
-        <th>
-          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'thread_size_asc' ? 'thread_size_desc' : 'thread_size_asc'}">
-            @if (data.sort === 'thread_size_asc') {
-              <i class="bi bi-sort-alpha-down"></i>
-            } @else if (data.sort === 'thread_size_desc') {
-              <i class="bi bi-sort-alpha-up-alt"></i>
-            }
-            <ng-container i18n>Thread</ng-container>
-          </a>
-        </th>
-        <th>
-          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'length_asc' ? 'length_desc' : 'length_asc'}">
-            @if (data.sort === 'length_asc') {
-              <i class="bi bi-sort-numeric-down"></i>
-            } @else if (data.sort === 'length_desc') {
-              <i class="bi bi-sort-numeric-up-alt"></i>
-            }
-            <ng-container i18n>Length</ng-container>
-          </a>
-        </th>
-        <th>
-          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'key_size_asc' ? 'key_size_desc' : 'key_size_asc'}">
-            @if (data.sort === 'key_size_asc') {
-              <i class="bi bi-sort-numeric-down"></i>
-            } @else if (data.sort === 'key_size_desc') {
-              <i class="bi bi-sort-numeric-up-alt"></i>
-            }
-            <ng-container i18n>Key Size</ng-container>
-          </a>
-        </th>
-        <th>
-          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'screwdriver_asc' ? 'screwdriver_desc' : 'screwdriver_asc'}">
-            @if (data.sort === 'screwdriver_asc') {
-              <i class="bi bi-sort-numeric-down"></i>
-            } @else if (data.sort === 'screwdriver_desc') {
-              <i class="bi bi-sort-numeric-up-alt"></i>
-            }
-            <ng-container i18n>Screwdriver</ng-container>
-          </a>
-        </th>
-        <th>
-          <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'color_asc' ? 'color_desc' : 'color_asc'}">
-            @if (data.sort === 'color_asc') {
-              <i class="bi bi-sort-alpha-down"></i>
-            } @else if (data.sort === 'color_desc') {
-              <i class="bi bi-sort-alpha-up-alt"></i>
-            }
-            <ng-container i18n>Color</ng-container>
-          </a>
-        </th>
-        <th><ng-container i18n>Photo</ng-container></th>
-      </tr>
-      </thead>
-      <tbody>
-        @for (item of data.items; track item.code) {
-          <tr>
-            <td><code>{{ item.code }}</code></td>
-            <td>
-              @for (replacement of item.replacements; track replacement) {
-                <div><code>{{ replacement }}</code></div>
+  <form class="mb-3">
+    <input type="search" class="form-control" [formControl]="searchControl" placeholder="Search by P/N" i18n-placeholder>
+  </form>
+
+  @if (data$|async; as data) {
+    @if (data.items.length > 0) {
+      <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+          <th>
+            <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'code_asc' ? 'code_desc' : 'code_asc'}">
+              @if (data.sort === 'code_asc') {
+                <i class="bi bi-sort-alpha-down"></i>
+              } @else if (data.sort === 'code_desc') {
+                <i class="bi bi-sort-alpha-up-alt"></i>
               }
-            </td>
-            <td>
-              @if (item.type) {
-                {{ fastenerTypeName[item.type] }}
+              <ng-container i18n>Code</ng-container>
+            </a>
+          </th>
+          <th><ng-container i18n>Replacement codes</ng-container></th>
+          <th>
+            <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'type_asc' ? 'type_desc' : 'type_asc'}">
+              @if (data.sort === 'type_asc') {
+                <i class="bi bi-sort-alpha-down"></i>
+              } @else if (data.sort === 'type_desc') {
+                <i class="bi bi-sort-alpha-up-alt"></i>
               }
-              @if (item.standard) {
-                <div>{{item.standard}}</div>
+              <ng-container i18n>Type</ng-container>
+            </a>
+          </th>
+          <th>
+            <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'thread_size_asc' ? 'thread_size_desc' : 'thread_size_asc'}">
+              @if (data.sort === 'thread_size_asc') {
+                <i class="bi bi-sort-alpha-down"></i>
+              } @else if (data.sort === 'thread_size_desc') {
+                <i class="bi bi-sort-alpha-up-alt"></i>
               }
-            </td>
-            <td>
-              @if (item.threadPitch) {
-                {{item.threadSize}}×{{item.threadPitch | number:'1.2-2'}}
-              } @else {
-                {{item.threadSize}}
+              <ng-container i18n>Thread</ng-container>
+            </a>
+          </th>
+          <th>
+            <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'length_asc' ? 'length_desc' : 'length_asc'}">
+              @if (data.sort === 'length_asc') {
+                <i class="bi bi-sort-numeric-down"></i>
+              } @else if (data.sort === 'length_desc') {
+                <i class="bi bi-sort-numeric-up-alt"></i>
               }
-            </td>
-            <td>
-              @if (item.length) {
-                {{item.length}} mm
+              <ng-container i18n>Length</ng-container>
+            </a>
+          </th>
+          <th>
+            <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'key_size_asc' ? 'key_size_desc' : 'key_size_asc'}">
+              @if (data.sort === 'key_size_asc') {
+                <i class="bi bi-sort-numeric-down"></i>
+              } @else if (data.sort === 'key_size_desc') {
+                <i class="bi bi-sort-numeric-up-alt"></i>
               }
-            </td>
-            <td>
-              @if (item.keySize) {
-                {{item.keySize}} mm
+              <ng-container i18n>Key Size</ng-container>
+            </a>
+          </th>
+          <th>
+            <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'screwdriver_asc' ? 'screwdriver_desc' : 'screwdriver_asc'}">
+              @if (data.sort === 'screwdriver_asc') {
+                <i class="bi bi-sort-numeric-down"></i>
+              } @else if (data.sort === 'screwdriver_desc') {
+                <i class="bi bi-sort-numeric-up-alt"></i>
               }
-            </td>
-            <td>{{item.screwdriver}}</td>
-            <td>{{item.color}}</td>
-            <td>
-              @if (item.photo) {
-                <a [href]="'photo/' + item.photo"><img alt="" [src]="'photo/' + item.photo" /></a>
+              <ng-container i18n>Screwdriver</ng-container>
+            </a>
+          </th>
+          <th>
+            <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'color_asc' ? 'color_desc' : 'color_asc'}">
+              @if (data.sort === 'color_asc') {
+                <i class="bi bi-sort-alpha-down"></i>
+              } @else if (data.sort === 'color_desc') {
+                <i class="bi bi-sort-alpha-up-alt"></i>
               }
-            </td>
-          </tr>
-        }
-      </tbody>
+              <ng-container i18n>Color</ng-container>
+            </a>
+          </th>
+          <th><ng-container i18n>Photo</ng-container></th>
+        </tr>
+        </thead>
+        <tbody>
+          @for (item of data.items; track item.code) {
+            <tr>
+              <td><code>{{ item.code }}</code></td>
+              <td>
+                @for (replacement of item.replacements; track replacement) {
+                  <div><code>{{ replacement }}</code></div>
+                }
+              </td>
+              <td>
+                @if (item.type) {
+                  {{ fastenerTypeName[item.type] }}
+                }
+                @if (item.standard) {
+                  <div>{{item.standard}}</div>
+                }
+              </td>
+              <td>
+                @if (item.threadPitch) {
+                  {{item.threadSize}}×{{item.threadPitch | number:'1.2-2'}}
+                } @else {
+                  {{item.threadSize}}
+                }
+              </td>
+              <td>
+                @if (item.length) {
+                  {{item.length}} mm
+                }
+              </td>
+              <td>
+                @if (item.keySize) {
+                  {{item.keySize}} mm
+                }
+              </td>
+              <td>{{item.screwdriver}}</td>
+              <td>{{item.color}}</td>
+              <td>
+                @if (item.photo) {
+                  <a [href]="'photo/' + item.photo"><img alt="" [src]="'photo/' + item.photo" /></a>
+                }
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    } @else {
+      <div class="py-5 text-center mb-5">
+        <h1 i18n>Nothing found</h1>
+      </div>
     }
-  </table>
+  }
 
   <div class="decryption" style="min-height: 600px">
     <div>

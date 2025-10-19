@@ -34,6 +34,14 @@
           <context context-type="linenumber">11,12</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4521842167124637513" datatype="html">
+        <source>Nothing found</source>
+        <target>Ничего не найдено</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">157,158</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="5180153236375423069" datatype="html">
         <source>thread size</source>
         <target>размер резьбы</target>
@@ -64,6 +72,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1798059453149859430" datatype="html">
+        <source>Search by P/N</source>
+        <target>Поиск по артикулу</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8186013988289067040" datatype="html">

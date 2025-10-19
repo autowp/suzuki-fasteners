@@ -13,123 +13,131 @@
         <source>Add new item to database</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">8,9</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">233,234</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3220852476952327677" datatype="html">
         <source> or </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">234</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7639979365558383177" datatype="html">
         <source>open issue</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">11,12</context>
+          <context context-type="linenumber">22,23</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="5180153236375423069" datatype="html">
-        <source>thread size</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">236,237</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8694863121253851535" datatype="html">
-        <source>length</source>
+      <trans-unit id="1798059453149859430" datatype="html">
+        <source>Search by P/N</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">39</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3282282333626386809" datatype="html">
-        <source>screw with washer</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">41</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data.ts</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="769009328792778188" datatype="html">
-        <source>color/finnish</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8186013988289067040" datatype="html">
         <source>Code</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7205221862222707265" datatype="html">
         <source>Replacement codes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8650499415827640724" datatype="html">
         <source>Type</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6908538004733767397" datatype="html">
         <source>Thread</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2827233633791350200" datatype="html">
         <source>Length</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">105</context>
+          <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="382925165999813310" datatype="html">
         <source>Key Size</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3089784409543293727" datatype="html">
         <source>Screwdriver</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">125</context>
+          <context context-type="linenumber">94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9011959596901584887" datatype="html">
         <source>Color</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">135</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2798807656507405918" datatype="html">
-        <source>Standard</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">145</context>
+          <context context-type="linenumber">104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5750485945694679561" datatype="html">
         <source>Photo</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">148</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4521842167124637513" datatype="html">
+        <source>Nothing found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">157,158</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5180153236375423069" datatype="html">
+        <source>thread size</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8694863121253851535" datatype="html">
+        <source>length</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="769009328792778188" datatype="html">
+        <source>color/finnish</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">217</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7665108216654082247" datatype="html">
@@ -188,6 +196,13 @@
           <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="3282282333626386809" datatype="html">
+        <source>screw with washer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="4893250244643416878" datatype="html">
         <source>countersunk head self-tapping screw</source>
         <context-group purpose="location">
@@ -239,19 +254,19 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
-          <context context-type="linenumber">323</context>
+          <context context-type="linenumber">316</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
-          <context context-type="linenumber">383</context>
+          <context context-type="linenumber">376</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
-          <context context-type="linenumber">412</context>
+          <context context-type="linenumber">405</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
-          <context context-type="linenumber">439</context>
+          <context context-type="linenumber">432</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2390091576468691188" datatype="html">
@@ -270,15 +285,15 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
-          <context context-type="linenumber">328</context>
+          <context context-type="linenumber">321</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
-          <context context-type="linenumber">393</context>
+          <context context-type="linenumber">386</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
-          <context context-type="linenumber">421</context>
+          <context context-type="linenumber">414</context>
         </context-group>
       </trans-unit>
     </body>

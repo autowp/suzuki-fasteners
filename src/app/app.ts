@@ -57,7 +57,7 @@ export class App implements OnInit {
         this.#router.navigate([], {
           queryParamsHandling: 'merge',
           queryParams: {
-            [searchParamName]: value,
+            [searchParamName]: value.length > 0 ? value : undefined,
           },
         });
       });

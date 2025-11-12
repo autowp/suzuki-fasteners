@@ -322,6 +322,54 @@
           <context context-type="linenumber">408</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7353013166277328310" datatype="html">
+        <source>hex spacer bolt</source>
+        <target>шестигранный дистанционный болт</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5515016449254393024" datatype="html">
+        <source>countersunk head screw with lock washer</source>
+        <target>шестигранный дистанционный болт</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4377312713763804405" datatype="html">
+        <source>round screw with washer and lock washer</source>
+        <target>винт с округлой головкой с шайбой и гровером</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2267241457058034997" datatype="html">
+        <source>round screw with lock washer</source>
+        <target>винт с округлой головкой с гровером</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6879868971740099073" datatype="html">
+        <source>threaded spacer stud</source>
+        <target>резьбовая дистанционная шпилька</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6669078266155008712" datatype="html">
+        <source>hex nut</source>
+        <target>шестигранная гайка</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

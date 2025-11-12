@@ -332,7 +332,7 @@
       </trans-unit>
       <trans-unit id="5515016449254393024" datatype="html">
         <source>countersunk head screw with lock washer</source>
-        <target>шестигранный болт с потайной головкой и гровером</target>
+        <target>винт с потайной головкой и гровером</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
           <context context-type="linenumber">45</context>

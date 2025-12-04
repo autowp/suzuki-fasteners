@@ -509,7 +509,7 @@ export const data: Item[] = [
   },
   {
     code: '09100-10168',
-    type: FastenerType.HEX_BOLT,
+    type: FastenerType.HEX_SPACER_BOLT,
     length: 37,
     threadSize: 'M10',
     keySize: 14,
@@ -626,12 +626,14 @@ export const data: Item[] = [
   {
     code: '02142-06123',
     replacements: ['02142-0612A', '02142-0612B'],
+    type: FastenerType.MUSHROOM_SCREW,
     threadSize: 'M6',
     threadPitch: 1.0,
     length: 12,
   },
   {
     code: '02142-0612A',
+    type: FastenerType.MUSHROOM_SCREW,
     threadSize: 'M6',
     threadPitch: 1.0,
     length: 12,
@@ -641,6 +643,7 @@ export const data: Item[] = [
   },
   {
     code: '02142-0612B',
+    type: FastenerType.MUSHROOM_SCREW,
     threadSize: 'M6',
     threadPitch: 1.0,
     length: 12,

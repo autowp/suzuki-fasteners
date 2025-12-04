@@ -210,12 +210,28 @@
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="2583852956361940699" datatype="html">
+        <source>spacer screw</source>
+        <target>дистанционный винт</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="884383884197247008" datatype="html">
         <source>round screw</source>
         <target>винт с круглой головкой</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
           <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6910200012457660006" datatype="html">
+        <source>self-tapping mushroom screw</source>
+        <target>саморез с грибовидной головкой</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8378392630825027999" datatype="html">

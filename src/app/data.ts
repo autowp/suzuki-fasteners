@@ -103,8 +103,9 @@ export const data: Item[] = [
     code: '01550-08303',
     threadSize: 'M8',
     replacements: ['01550-0830A', '01550-0830B'],
-    type: FastenerType.HEX_BOLT_WITH_WASHER,
+    type: FastenerType.FLANGE_HEX_BOLT,
     length: 30,
+    threadPitch: 1.25,
     keySize: 12,
   },
   {
@@ -119,8 +120,12 @@ export const data: Item[] = [
   },
   {
     code: '01550-0830B',
+    type: FastenerType.FLANGE_HEX_BOLT,
     threadSize: 'M8',
+    keySize: 12,
     length: 30,
+    threadPitch: 1.25,
+    color: $localize`black`,
   },
   {
     code: '01550-06123',

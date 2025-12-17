@@ -10,6 +10,8 @@ export interface Item {
   type?: FastenerType;
   standard?: string;
   photo?: string;
+  washerThickness?: number;
+  washerWidth?: number;
 }
 
 export enum FastenerType {
@@ -31,6 +33,7 @@ export enum FastenerType {
   COUNTERSUNK_HEAD_SELF_TAPPING_SCREW = 'countersunk head self-tapping screw',
   THREADED_SPACER_STUD = 'threaded spacer stud',
   HEX_NUT = 'hex nut',
+  WASHER = 'washer',
 }
 
 export const fastenerTypeName: Record<FastenerType, string> = {
@@ -52,6 +55,7 @@ export const fastenerTypeName: Record<FastenerType, string> = {
   [FastenerType.COUNTERSUNK_HEAD_SELF_TAPPING_SCREW]: $localize`countersunk head self-tapping screw`,
   [FastenerType.THREADED_SPACER_STUD]: $localize`threaded spacer stud`,
   [FastenerType.HEX_NUT]: $localize`hex nut`,
+  [FastenerType.WASHER]: $localize`washer`,
 };
 
 export const data: Item[] = [
@@ -334,12 +338,27 @@ export const data: Item[] = [
   {
     code: '02142-06103',
     replacements: ['02142-0610A', '02142-0610B'],
+    screwdriver: 'PH',
+    length: 10,
+    threadSize: 'M6',
+    threadPitch: 1.0,
   },
   {
     code: '02142-0610A',
+    screwdriver: 'PH',
+    length: 10,
+    threadSize: 'M6',
+    threadPitch: 1.0,
   },
   {
     code: '02142-0610B',
+    type: FastenerType.MUSHROOM_SCREW,
+    screwdriver: 'PH',
+    length: 10,
+    threadSize: 'M6',
+    threadPitch: 1.0,
+    color: $localize`black`,
+    photo: '02142-0610B.webp',
   },
   {
     code: '01550-06163',
@@ -562,10 +581,11 @@ export const data: Item[] = [
   },
   {
     code: '03121-05163',
-    replacements: ['03121-0516A'],
+    replacements: ['03121-0516A', '03121-0516B'],
     type: FastenerType.COUNTERSUNK_HEAD_SELF_TAPPING_SCREW,
     length: 12,
     threadSize: 'M5',
+    threadPitch: 2.0,
     screwdriver: 'PH',
   },
   {
@@ -573,9 +593,20 @@ export const data: Item[] = [
     type: FastenerType.COUNTERSUNK_HEAD_SELF_TAPPING_SCREW,
     length: 12,
     threadSize: 'M5',
+    threadPitch: 2.0,
     screwdriver: 'PH',
     color: $localize`silver`,
     photo: '03121-0516A.webp',
+  },
+  {
+    code: '03121-0516B',
+    type: FastenerType.COUNTERSUNK_HEAD_SELF_TAPPING_SCREW,
+    length: 12,
+    threadSize: 'M5',
+    threadPitch: 2.0,
+    screwdriver: 'PH',
+    color: $localize`black`,
+    photo: '03121-0516B.webp',
   },
   {
     code: '01580-08203',
@@ -821,5 +852,14 @@ export const data: Item[] = [
     keySize: 12,
     color: $localize`black`,
     photo: '01550-0850B.webp',
+  },
+  {
+    code: '09160-10094',
+    type: FastenerType.WASHER,
+    threadSize: 'M10',
+    washerThickness: 1.5,
+    washerWidth: 15,
+    color: $localize`silver`,
+    photo: '09160-10094.webp',
   },
 ];

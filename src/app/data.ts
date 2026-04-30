@@ -862,4 +862,15 @@ export const data: Item[] = [
     color: $localize`silver`,
     photo: '09160-10094.webp',
   },
+  {
+    code: '09128-06032',
+    type: FastenerType.FLANGE_HEX_BOLT,
+    length: 13.5,
+    threadSize: 'M6',
+    keySize: 10,
+    threadPitch: 1.0,
+    washerWidth: 13.8,
+    color: $localize`silver`,
+    photo: '09128-06032.webp',
+  },
 ];

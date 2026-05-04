@@ -78,6 +78,9 @@ export const data: Item[] = [
   {
     code: '09118-06106',
     threadSize: 'M6',
+    threadPitch: 1.0,
+    washerWidth: 15.6,
+    washerThickness: 1.1,
     length: 16,
     color: $localize`silver`,
     type: FastenerType.HEX_BOLT_WITH_WASHER_AND_LOCK_WASHER,
@@ -473,6 +476,12 @@ export const data: Item[] = [
   {
     code: '09100-08253',
     type: FastenerType.HEX_BOLT,
+    length: 9.1,
+    keySize: 14,
+    threadSize: 'M8',
+    threadPitch: 1.25,
+    color: $localize`black`,
+    photo: '09100-08253.webp',
   },
   {
     code: '09116-06098',
@@ -482,15 +491,31 @@ export const data: Item[] = [
   {
     code: '09116-06098-XC0',
     type: FastenerType.HEX_BOLT_WITH_WASHER,
+    length: 14,
+    washerThickness: 1.1,
+    washerWidth: 19.6,
+    keySize: 10,
+    threadSize: 'M6',
+    threadPitch: 1.0,
+    // class: 7
+    color: $localize`silver`,
+    photo: '09116-06098-XC0.webp',
   },
   {
     code: '02112-35123',
     replacements: ['02112-3512A'],
-    type: FastenerType.SCREW,
+    type: FastenerType.ROUND_SCREW_WITH_LOCK_WASHER,
     screwdriver: 'PH',
   },
   {
     code: '02112-3512A',
+    type: FastenerType.ROUND_SCREW_WITH_LOCK_WASHER,
+    screwdriver: 'PH',
+    color: $localize`silver`,
+    length: 11,
+    threadSize: 'M5',
+    threadPitch: 0.8,
+    photo: '02112-3512A.webp',
   },
   {
     code: '01500-08203',
@@ -530,6 +555,18 @@ export const data: Item[] = [
     color: $localize`black`,
     screwdriver: 'PH',
     photo: '02112-7612B.webp',
+    washerWidth: 12.6,
+  },
+  {
+    code: '02112-7612A',
+    type: FastenerType.ROUND_SCREW_WITH_WASHER_AND_LOCK_WASHER,
+    length: 11,
+    threadSize: 'M6',
+    threadPitch: 1.0,
+    color: $localize`silver`,
+    screwdriver: 'PH',
+    photo: '02112-7612A.webp',
+    washerWidth: 12.6,
   },
   {
     code: '09100-10168',
@@ -872,5 +909,15 @@ export const data: Item[] = [
     washerWidth: 13.8,
     color: $localize`silver`,
     photo: '09128-06032.webp',
+  },
+  {
+    code: '09161-06008',
+    type: FastenerType.WASHER,
+    threadSize: 'M6',
+    washerWidth: 12.8,
+    washerThickness: 1.0,
+    color: $localize`silver`,
+    photo: '09128-06032.webp',
+    // plastic
   },
 ];

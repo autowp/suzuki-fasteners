@@ -917,7 +917,7 @@ export const data: Item[] = [
     washerWidth: 12.8,
     washerThickness: 1.0,
     color: $localize`silver`,
-    photo: '09128-06032.webp',
+    photo: '09161-06008.webp',
     // plastic
   },
 ];

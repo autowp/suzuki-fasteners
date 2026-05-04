@@ -916,7 +916,7 @@ export const data: Item[] = [
     threadSize: 'M6',
     washerWidth: 12.8,
     washerThickness: 1.0,
-    color: $localize`silver`,
+    color: $localize`white`,
     photo: '09161-06008.webp',
     // plastic
   },

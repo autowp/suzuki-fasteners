@@ -394,6 +394,14 @@
           <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="5358044029583463092" datatype="html">
+        <source>white</source>
+        <target>белый</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">919</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

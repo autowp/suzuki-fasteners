@@ -402,6 +402,14 @@
           <context context-type="linenumber">919</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="2420176716457652788" datatype="html">
+        <source>self-tapping screw</source>
+        <target>саморез</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

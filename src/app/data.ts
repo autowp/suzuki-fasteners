@@ -1,7 +1,7 @@
 export interface Item {
   code: string;
   replacements?: string[];
-  threadSize?: 'M5' | 'M6' | 'M8' | 'M10' | 'M12';
+  threadSize?: 'M4' | 'M5' | 'M6' | 'M8' | 'M10' | 'M12';
   threadPitch?: number;
   length?: number;
   keySize?: number;
@@ -24,6 +24,7 @@ export enum FastenerType {
   SCREW = 'screw',
   SPACER_SCREW = 'spacer screw',
   ROUND_SCREW = 'round screw',
+  SELF_TAPPING_SCREW = 'self-tapping screw',
   SELF_TAPPING_MUSHROOM_SCREW = 'self-tapping mushroom screw',
   MUSHROOM_SCREW = 'mushroom screw',
   SCREW_WITH_WASHER = 'screw with washer',
@@ -46,6 +47,7 @@ export const fastenerTypeName: Record<FastenerType, string> = {
   [FastenerType.SCREW]: $localize`screw`,
   [FastenerType.SPACER_SCREW]: $localize`spacer screw`,
   [FastenerType.ROUND_SCREW]: $localize`round screw`,
+  [FastenerType.SELF_TAPPING_SCREW]: $localize`self-tapping screw`,
   [FastenerType.SELF_TAPPING_MUSHROOM_SCREW]: $localize`self-tapping mushroom screw`,
   [FastenerType.MUSHROOM_SCREW]: $localize`mushroom screw`,
   [FastenerType.SCREW_WITH_WASHER]: $localize`screw with washer`,
@@ -327,6 +329,13 @@ export const data: Item[] = [
   },
   {
     code: '01550-0816B',
+    type: FastenerType.FLANGE_HEX_BOLT,
+    threadSize: 'M8',
+    keySize: 12,
+    length: 16,
+    threadPitch: 1.25,
+    color: $localize`black`,
+    photo: '01550-0816B.webp',
   },
   {
     code: '01550-08167',
@@ -919,5 +928,20 @@ export const data: Item[] = [
     color: $localize`white`,
     photo: '09161-06008.webp',
     // plastic
+  },
+  {
+    code: '03112-04253',
+    replacements: ['03112-0425B'],
+    type: FastenerType.SELF_TAPPING_SCREW,
+    threadSize: 'M4',
+    threadPitch: 1.7, // about
+  },
+  {
+    code: '03112-0425B',
+    type: FastenerType.SELF_TAPPING_SCREW,
+    threadSize: 'M4',
+    threadPitch: 1.7, // about
+    color: $localize`black`,
+    photo: '03112-0425B.webp',
   },
 ];

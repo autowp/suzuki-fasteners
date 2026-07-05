@@ -1007,7 +1007,7 @@ export const data: Item[] = [
   {
     code: '01570-06163',
     replacements: ['01570-0616A', '01570-0616B'],
-    type: FastenerType.HEX_BOLT_WITH_WASHER,
+    type: FastenerType.HEX_BOLT_WITH_LOCK_WASHER,
     length: 16,
     threadSize: 'M6',
     keySize: 10,
@@ -1015,7 +1015,7 @@ export const data: Item[] = [
   },
   {
     code: '01570-0616A',
-    type: FastenerType.HEX_BOLT_WITH_WASHER,
+    type: FastenerType.HEX_BOLT_WITH_LOCK_WASHER,
     length: 16,
     threadSize: 'M6',
     keySize: 10,
@@ -1025,7 +1025,7 @@ export const data: Item[] = [
   },
   {
     code: '01570-0616B',
-    type: FastenerType.HEX_BOLT_WITH_WASHER,
+    type: FastenerType.HEX_BOLT_WITH_LOCK_WASHER,
     length: 16,
     threadSize: 'M6',
     keySize: 10,

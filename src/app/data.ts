@@ -15,6 +15,7 @@ export interface Item {
 }
 
 export enum FastenerType {
+  TORX_BOLT = 'torx bolt',
   FLANGE_HEX_BOLT = 'flange hex bolt',
   HEX_BOLT = 'hex bolt',
   HEX_BOLT_WITH_WASHER = 'hex bolt with washer',
@@ -34,10 +35,12 @@ export enum FastenerType {
   COUNTERSUNK_HEAD_SELF_TAPPING_SCREW = 'countersunk head self-tapping screw',
   THREADED_SPACER_STUD = 'threaded spacer stud',
   HEX_NUT = 'hex nut',
+  FLANGE_HEX_NUT = 'flange hex nut',
   WASHER = 'washer',
 }
 
 export const fastenerTypeName: Record<FastenerType, string> = {
+  [FastenerType.TORX_BOLT]: $localize`torx bolt`,
   [FastenerType.FLANGE_HEX_BOLT]: $localize`flange hex bolt`,
   [FastenerType.HEX_BOLT]: $localize`hex bolt`,
   [FastenerType.HEX_BOLT_WITH_WASHER]: $localize`hex bolt with washer`,
@@ -57,6 +60,7 @@ export const fastenerTypeName: Record<FastenerType, string> = {
   [FastenerType.COUNTERSUNK_HEAD_SELF_TAPPING_SCREW]: $localize`countersunk head self-tapping screw`,
   [FastenerType.THREADED_SPACER_STUD]: $localize`threaded spacer stud`,
   [FastenerType.HEX_NUT]: $localize`hex nut`,
+  [FastenerType.FLANGE_HEX_NUT]: $localize`flange hex nut`,
   [FastenerType.WASHER]: $localize`washer`,
 };
 
@@ -72,10 +76,34 @@ export const data: Item[] = [
   },
   {
     code: '01550-10163',
+    replacements: ['01550-1016A', '01550-1016B'],
+    length: 16,
+    type: FastenerType.FLANGE_HEX_BOLT,
+    standard: 'JIS-B 1111',
+    keySize: 14,
+    threadSize: 'M10',
+    threadPitch: 1.25,
+  },
+  {
+    code: '01550-1016A',
+    length: 16,
+    color: $localize`silver`,
+    type: FastenerType.FLANGE_HEX_BOLT,
+    standard: 'JIS-B 1111',
+    keySize: 14,
+    threadSize: 'M10',
+    threadPitch: 1.25,
+  },
+  {
+    code: '01550-1016B',
     length: 16,
     color: $localize`black`,
     type: FastenerType.FLANGE_HEX_BOLT,
     standard: 'JIS-B 1111',
+    keySize: 14,
+    threadSize: 'M10',
+    threadPitch: 1.25,
+    photo: '01550-1016B.webp',
   },
   {
     code: '09118-06106',
@@ -873,6 +901,25 @@ export const data: Item[] = [
     photo: '03141-0620A.webp',
   },
   {
+    code: '03141-06123',
+    replacements: ['03141-0612A'],
+    type: FastenerType.SELF_TAPPING_MUSHROOM_SCREW,
+    threadSize: 'M6',
+    threadPitch: 2.5,
+    screwdriver: 'PH',
+    length: 12,
+  },
+  {
+    code: '03141-0612A',
+    type: FastenerType.SELF_TAPPING_MUSHROOM_SCREW,
+    threadSize: 'M6',
+    threadPitch: 2.5,
+    screwdriver: 'PH',
+    length: 12,
+    color: $localize`silver`,
+    photo: '03141-0612A.webp',
+  },
+  {
     code: '01550-08503',
     replacements: ['01550-0850A', '01550-0850B'],
     type: FastenerType.FLANGE_HEX_BOLT,
@@ -1149,5 +1196,34 @@ export const data: Item[] = [
     threadPitch: 1.6,
     color: $localize`silver`,
     photo: '03141-0416A.webp',
+  },
+  {
+    code: '09139-08015',
+    type: FastenerType.TORX_BOLT,
+    length: 30,
+    threadSize: 'M8',
+    screwdriver: 'T40',
+    threadPitch: 1.25,
+    color: $localize`silver`,
+    photo: '09139-08015.webp',
+  },
+  {
+    code: '08316-10123',
+    replacements: ['08316-1012A'],
+    type: FastenerType.FLANGE_HEX_NUT,
+    length: 11,
+    threadSize: 'M10',
+    keySize: 17,
+    threadPitch: 1.25,
+  },
+  {
+    code: '08316-1012A',
+    type: FastenerType.FLANGE_HEX_NUT,
+    length: 11,
+    threadSize: 'M10',
+    keySize: 17,
+    threadPitch: 1.25,
+    color: $localize`silver`,
+    photo: '08316-1012A.webp',
   },
 ];

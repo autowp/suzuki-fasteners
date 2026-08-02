@@ -37,6 +37,7 @@ export enum FastenerType {
   HEX_NUT = 'hex nut',
   FLANGE_HEX_NUT = 'flange hex nut',
   WASHER = 'washer',
+  LOCK_WASHER = 'lock washer',
 }
 
 export const fastenerTypeName: Record<FastenerType, string> = {
@@ -62,6 +63,7 @@ export const fastenerTypeName: Record<FastenerType, string> = {
   [FastenerType.HEX_NUT]: $localize`hex nut`,
   [FastenerType.FLANGE_HEX_NUT]: $localize`flange hex nut`,
   [FastenerType.WASHER]: $localize`washer`,
+  [FastenerType.LOCK_WASHER]: $localize`lock washer`,
 };
 
 export const data: Item[] = [
@@ -1225,5 +1227,42 @@ export const data: Item[] = [
     threadPitch: 1.25,
     color: $localize`silver`,
     photo: '08316-1012A.webp',
+  },
+  {
+    code: '09100-12111',
+    type: FastenerType.HEX_SPACER_BOLT,
+    length: 32,
+    threadSize: 'M12',
+    keySize: 17,
+    threadPitch: 1.25,
+    color: $localize`silver`,
+    photo: '09100-12111.webp',
+  },
+  {
+    code: '09100-10023',
+    type: FastenerType.HEX_SPACER_BOLT,
+    length: 40,
+    threadSize: 'M10',
+    keySize: 14,
+    threadPitch: 1.25,
+    color: $localize`silver`,
+    photo: '09100-10023.webp',
+  },
+  {
+    code: '08321-01123',
+    type: FastenerType.LOCK_WASHER,
+    replacements: ['08321-0112A'],
+    threadSize: 'M12',
+    washerWidth: 21.5,
+    washerThickness: 3.6,
+  },
+  {
+    code: '08321-0112A',
+    type: FastenerType.LOCK_WASHER,
+    threadSize: 'M12',
+    washerWidth: 21.5,
+    washerThickness: 3.6,
+    color: $localize`silver`,
+    photo: '08321-0112A.webp',
   },
 ];

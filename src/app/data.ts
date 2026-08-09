@@ -235,7 +235,11 @@ export const data: Item[] = [
     code: '01550-0835B',
     threadSize: 'M8',
     threadPitch: 1.25,
+    keySize: 12,
     length: 35,
+    color: $localize`black`,
+    type: FastenerType.FLANGE_HEX_BOLT,
+    photo: '01550-0835B.webp',
   },
   {
     code: '09118-08107',
@@ -922,6 +926,25 @@ export const data: Item[] = [
     photo: '03141-0612A.webp',
   },
   {
+    code: '03141-06103',
+    replacements: ['03141-0610A'],
+    type: FastenerType.SELF_TAPPING_MUSHROOM_SCREW,
+    threadSize: 'M6',
+    threadPitch: 2.5,
+    screwdriver: 'PH',
+    length: 10,
+  },
+  {
+    code: '03141-0610A',
+    type: FastenerType.SELF_TAPPING_MUSHROOM_SCREW,
+    threadSize: 'M6',
+    threadPitch: 2.5,
+    screwdriver: 'PH',
+    length: 10,
+    color: $localize`silver`,
+    photo: '03141-0610A.webp',
+  },
+  {
     code: '01550-08503',
     replacements: ['01550-0850A', '01550-0850B'],
     type: FastenerType.FLANGE_HEX_BOLT,
@@ -1108,6 +1131,7 @@ export const data: Item[] = [
     keySize: 10,
     threadPitch: 1.0,
     color: $localize`black`,
+    photo: '01550-0610B.webp',
   },
   {
     code: '01570-08253',
@@ -1136,6 +1160,7 @@ export const data: Item[] = [
     keySize: 12,
     threadPitch: 1.25,
     color: $localize`black`,
+    photo: '01570-0825B.webp',
   },
   {
     code: '02112-36123',

@@ -95,6 +95,7 @@ export const data: Item[] = [
     keySize: 14,
     threadSize: 'M10',
     threadPitch: 1.25,
+    photo: '01550-1016A.webp',
   },
   {
     code: '01550-1016B',
@@ -1316,5 +1317,17 @@ export const data: Item[] = [
     threadSize: 'M8',
     keySize: 12,
     threadPitch: 1.25,
+  },
+  {
+    code: '09136-05036',
+    type: FastenerType.SCREW_WITH_WASHER,
+    threadSize: 'M5',
+    threadPitch: 1.6, // about 1.6-1.7
+    screwdriver: 'PH',
+    keySize: 8,
+    length: 14,
+    washerWidth: 12,
+    washerThickness: 0.7,
+    photo: '09136-05036.webp',
   },
 ];

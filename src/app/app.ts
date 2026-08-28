@@ -107,6 +107,16 @@ export class App implements OnInit {
             case 'thread_size_desc':
               result = result.sort((n1, n2) => compareValues(n1.threadSize, n2.threadSize, 'desc'));
               break;
+            case 'strength_class_asc':
+              result = result.sort((n1, n2) =>
+                compareValues(n1.strengthClass, n2.strengthClass, 'asc'),
+              );
+              break;
+            case 'strength_class_desc':
+              result = result.sort((n1, n2) =>
+                compareValues(n1.strengthClass, n2.strengthClass, 'desc'),
+              );
+              break;
             case 'length_asc':
               result = result.sort((n1, n2) => compareValues(n1.length, n2.length, 'asc'));
               break;

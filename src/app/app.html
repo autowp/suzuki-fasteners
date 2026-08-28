@@ -65,6 +65,16 @@
             </a>
           </th>
           <th>
+            <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'strength_class_asc' ? 'strength_class_desc' : 'strength_class_asc'}">
+              @if (data.sort === 'strength_class_asc') {
+                <i class="bi bi-sort-alpha-down"></i>
+              } @else if (data.sort === 'strength_class_desc') {
+                <i class="bi bi-sort-alpha-up-alt"></i>
+              }
+              <ng-container i18n>Strength class</ng-container>
+            </a>
+          </th>
+          <th>
             <a [routerLink]="[]" [queryParams]="{sort: data.sort === 'length_asc' ? 'length_desc' : 'length_asc'}">
               @if (data.sort === 'length_asc') {
                 <i class="bi bi-sort-numeric-down"></i>
@@ -132,6 +142,7 @@
                   {{item.threadSize}}
                 }
               </td>
+              <td>{{item.strengthClass}}</td>
               <td>
                 @if (item.length) {
                   {{item.length}} mm

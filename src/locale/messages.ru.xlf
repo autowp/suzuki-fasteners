@@ -114,6 +114,14 @@
           <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="5817374964180501321" datatype="html">
+        <source>Strength class</source>
+        <target>Класс прочности</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="2827233633791350200" datatype="html">
         <source>Length</source>
         <target>Длина</target>
@@ -162,6 +170,22 @@
           <context context-type="linenumber">148</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="6784283161740103810" datatype="html">
+        <source>allen bolt</source>
+        <target>болт с внутренним шестигранником</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6857110552551913952" datatype="html">
+        <source>flange allen bolt</source>
+        <target>болт с внутренним шестигранником и фланцем</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7665108216654082247" datatype="html">
         <source>flange hex bolt</source>
         <target>шестигранный болт с фланцем</target>
@@ -200,6 +224,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data.ts</context>
           <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2560039057615241310" datatype="html">
+        <source>banjo bolt</source>
+        <target>болт-штуцер</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data.ts</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5609807868369280195" datatype="html">
